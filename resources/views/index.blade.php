@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Hubble Day Photo</title>
 
   <!-- Bootstrap Core CSS -->
@@ -24,15 +23,15 @@
 </head>
 
 <body id="page-top">
-    <form action="/imagenFondo" method="POST" role="form">
-      {{ csrf_field() }}
+
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
       <h1 class="mb-1">BIENVENIDO</h1>
       <h3 class="mb-5">
         <em>Mejor foto del telescopio espacial Hubble en el dia de tu cumpleaños u otra fecha</em>
       </h3>
-
+    <form action="{{ route('imagenfondo') }}" method="POST" role="form">
+       {{  csrf_field() }}
    <select name="año" id="año">
        <option value="enero">Enero</option>
        <option value="febrero">Febrero</option>

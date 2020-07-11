@@ -1,17 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Redirect;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+
+
     public function inicio(){
     	 return view('index');
 							}
 
 
-    public function imagenFondo(Request $request){
+    public function imagenfondo(){
     //	$value = $request->dia;
  //	 $input = $request->input();
   //  $imagen = $input['dia'];
@@ -23,12 +25,17 @@ class PageController extends Controller
    //if your want to get single element,someName in this case
    	//	$someName = $request->dia; 
     	//	 return view('imagenFondo');
-    	return view('imagenFondoMostrar');
-    	//  return redirect()->route('imagenFondoMostrar');
+     //   return Redirect::to('/imagenFondoMostrar');
+   // 	return view('imagenFondoMostrar');
+     // return  'Form Posted.';
+   //   return redirect()->route('imagenFondoMostrar');
+   //   return redirect()->route('imagenFondoMostrar');
+         return view('index');
+  //  return redirect()->back();
 							}
 
   public function imagenFondoMostrar(){
     	 return view('imagenFondoMostrar');
-							}
+						}
 
 }
