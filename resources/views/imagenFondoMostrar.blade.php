@@ -22,7 +22,14 @@
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
 
-   <link href="css/styles.css" rel="stylesheet">
+<style type="text/css">
+     #fondo{
+    background:url('img/enero/enero<?= $value ?>.jpg') no-repeat center center;
+    min-height:100%;
+    background-size:cover;
+} 
+</style>
+
 </head>
 
 <body>

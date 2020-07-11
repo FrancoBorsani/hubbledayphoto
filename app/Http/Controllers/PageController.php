@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Redirect;
 use Illuminate\Http\Request;
+use View;
 
 class PageController extends Controller
 {
@@ -13,8 +14,8 @@ class PageController extends Controller
 							}
 
 
-    public function imagenfondo(){
-    //	$value = $request->dia;
+    public function imagenfondo(Request $datos){
+    	$value = $datos->dia;
  //	 $input = $request->input();
   //  $imagen = $input['dia'];
  //$inputs = request()->all();
@@ -30,8 +31,18 @@ class PageController extends Controller
      // return  'Form Posted.';
    //   return redirect()->route('imagenFondoMostrar');
    //   return redirect()->route('imagenFondoMostrar');
-         return view('imagenFondoMostrar');
+     
+     
+
+
+
+       //  return view('imagenFondoMostrar');
+
+      return View::make("imagenFondoMostrar")->with(array('value'=>$value));
   //  return redirect()->back();
+
+
+
 							}
 
   //public function imagenFondoMostrar(){
