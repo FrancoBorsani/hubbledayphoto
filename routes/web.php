@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PageController@inicio');
 Route::post('/imagenfondo', 'PageController@imagenfondo')->name('imagenfondo');
 
-Route::get('imagenFondoMostrar',"PageController@imagenFondoMostrar")->name('imagenFondoMostrar');
+//Route::get('imagenFondoMostrar',"PageController@imagenFondoMostrar")->name('imagenFondoMostrar');
 
 //Route::get('imagenFondo',"PageController@imagenFondoMostrar")->name('imagenFondoMostrar');
 

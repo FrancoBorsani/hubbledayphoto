@@ -30,12 +30,12 @@ class PageController extends Controller
      // return  'Form Posted.';
    //   return redirect()->route('imagenFondoMostrar');
    //   return redirect()->route('imagenFondoMostrar');
-         return view('index');
+         return view('imagenFondoMostrar');
   //  return redirect()->back();
 							}
 
-  public function imagenFondoMostrar(){
-    	 return view('imagenFondoMostrar');
-						}
+  //public function imagenFondoMostrar(){
+   // 	 return view('imagenFondoMostrar');
+		//				}
 
 }
