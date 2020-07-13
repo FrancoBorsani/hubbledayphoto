@@ -38,6 +38,7 @@
   <!--     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
     </div>
     <div class="overlay"></div>
+
   </header>
 
 </body>
