@@ -24,7 +24,7 @@
 
 <style type="text/css">
      #fondo{
-    background:url('img/enero/enero<?= $value ?>.jpg') no-repeat center center;
+    background:url('img/<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg') no-repeat center center;
     min-height:100%;
     background-size:cover;
 } 

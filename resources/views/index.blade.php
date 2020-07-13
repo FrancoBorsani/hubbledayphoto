@@ -32,7 +32,7 @@
       </h3>
     <form action="{{ route('imagenfondo') }}" method="POST" role="form">
        {{  csrf_field() }}
-   <select name="año" id="año">
+   <select name="mes" id="mes">
        <option value="enero">Enero</option>
        <option value="febrero">Febrero</option>
        <option value="marzo">Marzo</option>

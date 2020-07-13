@@ -15,7 +15,8 @@ class PageController extends Controller
 
 
     public function imagenfondo(Request $datos){
-    	$value = $datos->dia;
+    	$value = $datos->mes;
+      $value2 = $datos->dia;
  //	 $input = $request->input();
   //  $imagen = $input['dia'];
  //$inputs = request()->all();
@@ -37,8 +38,8 @@ class PageController extends Controller
 
 
        //  return view('imagenFondoMostrar');
-
-      return View::make("imagenFondoMostrar")->with(array('value'=>$value));
+    return View::make('imagenFondoMostrar', array('value'=>$value, 'value2'=>$value2));
+    //  return View::make("imagenFondoMostrar")->with(array('value2'=>$value2));
   //  return redirect()->back();
 
 
