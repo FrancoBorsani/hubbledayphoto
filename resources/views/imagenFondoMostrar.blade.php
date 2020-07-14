@@ -29,18 +29,58 @@
     background-size:cover;
 } 
 </style>
-
 </head>
 
 <body>
+
   <header class="masthead d-flex" id="fondo">
     <div class="container text-center my-auto"> 
   <!--     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
+<p>
+Upload an image from your desktop and select a filter from the select:
+</p>
+<input type="file" id="imageLoader"/>
+<label for="filter-changer">Select a filter to apply</label>
+<select id="filter-changer">
+  <option value="none">None</option>
+  <option value="red">Red</option>
+  <option value="gaussian">Gaussian</option>
+  <option value="grayscale">Grayscale</option>
+  <option value="highpass">highpass</option>
+  <option value="invert">invert</option>
+  <option value="laplacian">laplacian</option>
+  <option value="prewittHorizontal">Prewitt Horizontal</option>
+  <option value="prewittVertical">Prewitt Vertical</option>
+  <option value="roberts">roberts</option>
+  <option value="saturation">saturation</option>
+  <option value="sepia">sepia</option>
+  <option value="sharpen">sharpen</option>
+  <option value="sobelHorizontal">sobel Horizontal</option>
+  <option value="sobelVertical">sobel Vertical</option>
+  <option value="thresholding">thresholding</option>
+</select>
+
+<br>
+
+
+<img id="original-image" />
+<canvas id="filtered-image" />
+
+
+
+
+
+
+
     </div>
     <div class="overlay"></div>
 
   </header>
 
 </body>
+
+<script src="js/lena.js"></script>
+<script src="js/filtros.js"></script>
+
 
 </html>
