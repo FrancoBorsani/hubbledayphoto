@@ -23,23 +23,27 @@
 
 
 <style type="text/css">
-     #fondo{
-    background:url('img/<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg') no-repeat center center;
-    min-height:100%;
-    background-size:cover;
+     #imageLoader{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 } 
+
 </style>
 </head>
 
 <body>
 
-  <header class="masthead d-flex" id="fondo">
+  <header>
+       <img src='img/<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg' id="imageLoader">
     <div class="container text-center my-auto"> 
-  <!--     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
-<p>
-Upload an image from your desktop and select a filter from the select:
-</p>
-<input type="file" id="imageLoader"/>
+
+
 <label for="filter-changer">Select a filter to apply</label>
 <select id="filter-changer">
   <option value="none">None</option>
@@ -62,7 +66,6 @@ Upload an image from your desktop and select a filter from the select:
 
 <br>
 
-
 <img id="original-image" />
 <canvas id="filtered-image" />
 
@@ -75,9 +78,12 @@ Upload an image from your desktop and select a filter from the select:
     </div>
     <div class="overlay"></div>
 
-  </header>
+<!--  </header> -->
 
 </body>
+
+
+
 
 <script src="js/lena.js"></script>
 <script src="js/filtros.js"></script>

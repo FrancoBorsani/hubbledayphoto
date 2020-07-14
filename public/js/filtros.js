@@ -1,8 +1,10 @@
 var imageLoader = document.getElementById('imageLoader');
+//imageLoader.src = '<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg';
 var originalImage = document.getElementById("original-image");
 var filteredImageCanvas = document.getElementById("filtered-image");
 var filterChanger = document.getElementById("filter-changer");
 var imageUploaded = false;
+
 
 // Handle image upload into img tag
 imageLoader.addEventListener('change', function(e){
