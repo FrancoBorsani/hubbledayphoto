@@ -1,25 +1,23 @@
 var imageLoader = document.getElementById('imageLoader');
-//imageLoader.src = '<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg';
-var originalImage = document.getElementById("original-image");
+//var originalImage = document.getElementById("original-image");
 var filteredImageCanvas = document.getElementById("filtered-image");
 var filterChanger = document.getElementById("filter-changer");
-var imageUploaded = false;
+var imageUploaded = true;
 
 
 // Handle image upload into img tag
-imageLoader.addEventListener('change', function(e){
-		var reader = new FileReader();
+//imageLoader.addEventListener('change', function(e){
+		//var reader = new FileReader();
+  //  reader.onload = function(event){
+      //  originalImage.onload = function(){
+      //      console.log("Image Succesfully Loaded");
+     //     imageUploaded = true;
+     //   };
+     //   originalImage.src = event.target.result;
+  //  };
     
-    reader.onload = function(event){
-        originalImage.onload = function(){
-             console.log("Image Succesfully Loaded");
-             imageUploaded = true;
-        };
-        originalImage.src = event.target.result;
-    };
-    
-    reader.readAsDataURL(e.target.files[0]);   
-}, false);
+  //  reader.readAsDataURL(e.target.files[0]);   
+//}, false);
 
 filterChanger.addEventListener("change", function(e){
 	var filter = filterChanger.value;
@@ -27,6 +25,6 @@ filterChanger.addEventListener("change", function(e){
   if(imageUploaded && filter != "none"){
   
   	// Apply filter
-  	LenaJS.filterImage(filteredImageCanvas, LenaJS[filter], originalImage);
+  	LenaJS.filterImage(filteredImageCanvas, LenaJS[filter], imageLoader);
   }
 }, false);

@@ -23,7 +23,7 @@
 
 
 <style type="text/css">
-     #imageLoader{
+     #imageLoader, #filtered-image{
   position: fixed; 
   top: 0; 
   left: 0; 
@@ -40,9 +40,8 @@
 <body>
 
   <header>
-       <img src='img/<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg' id="imageLoader">
     <div class="container text-center my-auto"> 
-
+<img src='img/<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg' id="imageLoader">
 
 <label for="filter-changer">Select a filter to apply</label>
 <select id="filter-changer">
@@ -66,7 +65,6 @@
 
 <br>
 
-<img id="original-image" />
 <canvas id="filtered-image" />
 
 
