@@ -23,18 +23,31 @@
 
 
 <style type="text/css">
-     #imageLoader, #filtered-image{
+     #imageLoader{
   position: fixed; 
   top: 0; 
   left: 0; 
-
-  /* Preserve aspet ratio */
+  /* Preserve aspect ratio */
   min-width: 100%;
   min-height: 100%;
-  z-index: -1;
-} 
+  z-index: -2;
+}
+
+
+#loc{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+ -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(5px);
+}
 
 </style>
+
 </head>
 
 <body>
@@ -42,49 +55,24 @@
   <header>
     <div class="container text-center my-auto"> 
 <img src='img/<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg' id="imageLoader">
-
-<label for="filter-changer">Select a filter to apply</label>
-<select id="filter-changer">
-  <option value="none">None</option>
-  <option value="red">Red</option>
-  <option value="gaussian">Gaussian</option>
-  <option value="grayscale">Grayscale</option>
-  <option value="highpass">highpass</option>
-  <option value="invert">invert</option>
-  <option value="laplacian">laplacian</option>
-  <option value="prewittHorizontal">Prewitt Horizontal</option>
-  <option value="prewittVertical">Prewitt Vertical</option>
-  <option value="roberts">roberts</option>
-  <option value="saturation">saturation</option>
-  <option value="sepia">sepia</option>
-  <option value="sharpen">sharpen</option>
-  <option value="sobelHorizontal">sobel Horizontal</option>
-  <option value="sobelVertical">sobel Vertical</option>
-  <option value="thresholding">thresholding</option>
-</select>
-
-<br>
-
-<canvas id="filtered-image" />
-
-
-
-
-
+<button onclick="myFunction()">Click me</button>
 
 
     </div>
     <div class="overlay"></div>
 
-<!--  </header> -->
 
 </body>
 
-
+<script type="text/javascript">
+  function myFunction()
+{
+  document.getElementById('imageLoader').setAttribute("id", "loc");
+  }
+</script>
 
 
 <script src="js/lena.js"></script>
 <script src="js/filtros.js"></script>
-
 
 </html>
