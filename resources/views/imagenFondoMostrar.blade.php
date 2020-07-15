@@ -21,6 +21,7 @@
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
+  <link href="css/buttons.css" rel="stylesheet">
 
 <style type="text/css">
      #imageLoader{
@@ -55,7 +56,25 @@
   <header>
     <div class="container text-center my-auto"> 
 <img src='img/<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg' id="imageLoader">
-<button onclick="myFunction()">Click me</button>
+
+<button style="--content: 'Hover me!';">
+  <div class="left"></div>
+    Hover me!
+  <div class="right"></div>
+</button>
+
+<button style="--content: 'Hover me!';">
+  <div class="left"></div>
+    Hover me!
+  <div class="right"></div>
+</button>
+
+<button style="--content: 'Hover me!';">
+  <div class="left" style=""></div>
+    Hover me!
+  <div class="right"></div>
+</button>
+
 
 
     </div>
