@@ -33,9 +33,9 @@
   min-height: 100%;
   z-index: -2;
 }
-
-
-#loc{
+#original{
+ -webkit-filter: grayscale(-90%);
+  filter: grayscale(-90%);
   position: fixed; 
   top: 0; 
   left: 0; 
@@ -43,8 +43,32 @@
   min-width: 100%;
   min-height: 100%;
   z-index: -2;
- -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-  filter: blur(5px);
+}
+
+
+
+#escalaGrises{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+ -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
+}
+
+#contraste{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+ -webkit-filter: contrast(200%);
+  filter: contrast(200%);
 }
 
 </style>
@@ -57,24 +81,23 @@
     <div class="container text-center my-auto"> 
 <img src='img/<?= $value ?>/<?= $value ?><?= $value2 ?>.jpg' id="imageLoader">
 
-<button style="--content: 'Hover me!';">
+<button style="--content: 'Original';"  onclick="window.location.reload();">
   <div class="left"></div>
-    Hover me!
+    Original
   <div class="right"></div>
 </button>
 
-<button style="--content: 'Hover me!';">
+<button style="--content: 'Escala grises';" onclick="escalaGrises()">
   <div class="left"></div>
-    Hover me!
+    Escala grises
   <div class="right"></div>
 </button>
 
-<button style="--content: 'Hover me!';">
+<button style="--content: 'Contraste';" onclick="contraste()">
   <div class="left" style=""></div>
-    Hover me!
+    Contraste
   <div class="right"></div>
 </button>
-
 
 
     </div>
@@ -84,14 +107,21 @@
 </body>
 
 <script type="text/javascript">
-  function myFunction()
+  function original()
 {
-  document.getElementById('imageLoader').setAttribute("id", "loc");
+  document.getElementById('imageLoader').setAttribute("id", "original");
   }
+
+ function escalaGrises()
+{
+  document.getElementById('imageLoader').setAttribute("id", "escalaGrises");
+  }
+
+  function contraste()
+{
+  document.getElementById('imageLoader').setAttribute("id", "contraste");
+  }
+
 </script>
-
-
-<script src="js/lena.js"></script>
-<script src="js/filtros.js"></script>
 
 </html>
