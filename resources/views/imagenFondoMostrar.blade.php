@@ -71,6 +71,43 @@
   filter: contrast(200%);
 }
 
+
+#sepiaEffect{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+ -webkit-filter: sepia(90%);
+ filter: sepia(90%);
+}
+
+#saturateEffect{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+ -webkit-filter: saturate(300%);
+filter: saturate(300%);
+}
+
+#brilloEffect{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+ -webkit-filter: brightness(2.5);
+filter: brightness(2.5);
+}
+
 </style>
 
 </head>
@@ -99,6 +136,24 @@
   <div class="right"></div>
 </button>
 
+<button style="--content: 'Sepia';" onclick="sepiaEffect()">
+  <div class="left" style=""></div>
+    Sepia
+  <div class="right"></div>
+</button>
+
+<button style="--content: 'Saturación';" onclick="saturateEffect()">
+  <div class="left" style=""></div>
+    Saturación
+  <div class="right"></div>
+</button>
+
+<button style="--content: 'Brillo';" onclick="brilloEffect()">
+  <div class="left" style=""></div>
+    Brillo
+  <div class="right"></div>
+</button>
+
 
     </div>
     <div class="overlay"></div>
@@ -121,6 +176,21 @@
 {
   document.getElementById('imageLoader').setAttribute("id", "contraste");
   }
+
+   function sepiaEffect()
+{
+  document.getElementById('imageLoader').setAttribute("id", "sepiaEffect");
+  }
+     function saturateEffect()
+{
+  document.getElementById('imageLoader').setAttribute("id", "saturateEffect");
+  }
+
+      function brilloEffect()
+{
+  document.getElementById('imageLoader').setAttribute("id", "brilloEffect");
+  }
+
 
 </script>
 
