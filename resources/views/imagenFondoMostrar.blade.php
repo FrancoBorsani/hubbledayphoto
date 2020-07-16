@@ -98,8 +98,8 @@ filter: saturate(300%);
 
 #brilloEffect{
   position: fixed; 
-  top: 0; 
-  left: 0; 
+  top: 0;
+  left: 0;
   /* Preserve aspect ratio */
   min-width: 100%;
   min-height: 100%;
