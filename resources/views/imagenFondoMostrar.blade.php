@@ -104,8 +104,8 @@ filter: saturate(300%);
   min-width: 100%;
   min-height: 100%;
   z-index: -2;
- -webkit-filter: brightness(2.5);
-filter: brightness(2.5);
+ -webkit-filter: brightness(2.2);
+filter: brightness(2.2);
 }
 
 </style>
