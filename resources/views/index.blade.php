@@ -20,6 +20,45 @@
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
+:root {
+  /* --text-color: hsla(210, 50%, 85%, 1);*/
+     --text-color: #000000;
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  position:relative;
+  padding: 5px 10px;  
+  border: none;
+  background: none;
+  cursor: pointer;
+  
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 15px;  
+  color: var(--text-color);
+  
+  /*background-color: var(--btn-color);*/
+  background-color: #FFFFFF;
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+}
+
+
+  </style>
+
 </head>
 
 <body id="page-top">
@@ -84,12 +123,21 @@
 </select>
 </br>
 </br>
- <input type="submit" value="Submit">Enviar
+<br>
+<button style="--content: 'Enviar';" value="Submit">
+  <div class="left"></div>
+    Enviar
+  <div class="right"></div>
+</button>
 </form>
  
   <!--     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
     </div>
     <div class="overlay"></div>
+
+
+
+
   </header>
 
 
@@ -97,5 +145,6 @@
 </body>
 
     <script type="text/javascript" src="js/scripts.js"></script>
+      
 
 </html>
