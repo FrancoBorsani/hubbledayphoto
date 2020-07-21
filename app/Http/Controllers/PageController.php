@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 use Redirect;
 use Illuminate\Http\Request;
 use View;
+use App;
 
 class PageController extends Controller
 {
 
 
     public function inicio(){
+      $datosBD = App\UserData::all(); //Trae todo de la BD.
     	 return view('index');
 							}
 
@@ -49,5 +51,7 @@ class PageController extends Controller
   //public function imagenFondoMostrar(){
    // 	 return view('imagenFondoMostrar');
 		//				}
+
+
 
 }
