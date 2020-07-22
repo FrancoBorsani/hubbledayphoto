@@ -9,9 +9,17 @@ use App;
 class PageController extends Controller
 {
 
-
     public function inicio(){
-      $datosBD = App\UserData::all(); //Trae todo de la BD.
+    //  $datosBD = App\UserData::all(); //Trae todo de la BD.
+        $nuevoUser = new App\Dato;
+
+
+
+    $nuevoUser->userip =request()->ip();
+
+
+        $nuevoUser -> save();
+
     	 return view('index');
 							}
 
@@ -51,7 +59,6 @@ class PageController extends Controller
   //public function imagenFondoMostrar(){
    // 	 return view('imagenFondoMostrar');
 		//				}
-
 
 
 }
