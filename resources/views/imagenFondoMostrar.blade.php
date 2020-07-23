@@ -156,6 +156,8 @@ filter: brightness(2.2);
 
 
     </div>
+
+    <p style="color: #EFEFEF;">Nota: luego de aplicar cualquier efecto, se debe volver a seleccionar "Original" para poder aplicar otro filtro</p>
     <div class="overlay"></div>
 
 
