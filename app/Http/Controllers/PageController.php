@@ -10,15 +10,22 @@ class PageController extends Controller
 {
 
     public function inicio(){
-    //  $datosBD = App\UserData::all(); //Trae todo de la BD.
+        $datosBD = App\Dato::all(); //Trae todo de la BD.
         $nuevoUser = new App\Dato;
+        $nuevoUser->userip =request()->ip();
+        $bandera = false;
+        foreach ($datosBD as $usersip) {
+          if ($nuevoUser->get('userip') == $usersip->get('userip')) {
+            $bandera = true;
+          }
+        }
+
+
+     //   echo "{{$datosBD}}";
+        if(!$bandera) {$nuevoUser -> save();}
 
 
 
-    $nuevoUser->userip =request()->ip();
-
-
-        $nuevoUser -> save();
 
     	 return view('index');
 							}
