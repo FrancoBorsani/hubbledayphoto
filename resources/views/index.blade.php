@@ -130,7 +130,8 @@ button {
   <div class="right"></div>
 </button>
 </form>
- <?= $consulta ?>/
+<br>
+<p style="color: #30EB02 ;">Cantidad de visitas: <?=str_replace('/', ' ', $consulta)?></p>
   <!--     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
     </div>
     <div class="overlay"></div>
