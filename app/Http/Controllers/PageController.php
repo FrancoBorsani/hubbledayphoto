@@ -25,7 +25,7 @@ class PageController extends Controller
      //   echo "{{$datosBD}}";
         if(!$bandera) {$nuevoUser -> save();}
 
-        $consulta = \DB::table('datos')->select('userip')->groupBy('userip')->get();
+        $consulta = \DB::table('datos')->select('userip')->groupBy('userip')->get()->count();
 
         return view('index', compact('consulta'));
 							}
