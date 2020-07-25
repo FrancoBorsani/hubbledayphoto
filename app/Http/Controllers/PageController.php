@@ -5,6 +5,7 @@ use Redirect;
 use Illuminate\Http\Request;
 use View;
 use App;
+//use DB;
 
 class PageController extends Controller
 {
@@ -24,10 +25,9 @@ class PageController extends Controller
      //   echo "{{$datosBD}}";
         if(!$bandera) {$nuevoUser -> save();}
 
+        $consulta = \DB::table('datos')->select('userip')->groupBy('userip')->get();
 
-
-
-    	 return view('index');
+        return view('index', compact('consulta'));
 							}
 
 
