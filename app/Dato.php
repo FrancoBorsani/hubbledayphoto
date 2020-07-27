@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Dato extends Model
 {
-    //
+     protected $fillable = ['userip'];
 }

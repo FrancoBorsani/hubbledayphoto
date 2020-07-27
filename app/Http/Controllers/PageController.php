@@ -5,7 +5,7 @@ use Redirect;
 use Illuminate\Http\Request;
 use View;
 use App;
-//use DB;
+use Illuminate\Support\Facades\Hash;
 
 class PageController extends Controller
 {
@@ -23,7 +23,15 @@ class PageController extends Controller
 
 
      //   echo "{{$datosBD}}";
-        if(!$bandera) {$nuevoUser -> save();}
+        if(!$bandera) {
+      $nuevoUser->fill([
+         'userip' => encrypt($nuevoUser->get('userip'))
+      ])->save();
+
+
+       $nuevoUser -> save();
+         // //   $claveEncriptada -> save();
+        }
 
         $consulta = \DB::table('datos')->select('userip')->groupBy('userip')->get()->count();
         return view('index', compact('consulta'));

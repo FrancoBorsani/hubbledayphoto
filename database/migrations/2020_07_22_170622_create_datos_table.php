@@ -15,7 +15,7 @@ class CreateDatosTable extends Migration
     {
         Schema::create('datos', function (Blueprint $table) {
             $table->id();
-            $table->string('userip');
+            $table->string('userip', 500); //->change();
             $table->timestamps();
         });
     }
